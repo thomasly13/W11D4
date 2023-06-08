@@ -1,4 +1,5 @@
 import produceData from '../../src/mockData/produce.json'
+import { useDispatch } from 'react-redux';
 
 const POPULATE = 'POPULATE';
 
@@ -9,7 +10,6 @@ export const populateProduce = () => ({
 
 export default function produceReducer(state = {}, action) {
     const nextState = Object.assign({}, state);
-
     switch (action.type) {
         case POPULATE:
             const populate = {};
